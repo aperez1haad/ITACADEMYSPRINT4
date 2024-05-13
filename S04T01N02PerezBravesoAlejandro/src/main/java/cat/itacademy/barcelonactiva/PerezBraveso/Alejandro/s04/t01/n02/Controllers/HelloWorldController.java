@@ -1,17 +1,17 @@
-package cat.itacademy.barcelonactiva.PerezBraveso.Alejandro.s04.t01.n01.Controllers;
+package cat.itacademy.barcelonactiva.PerezBraveso.Alejandro.s04.t01.n02.Controllers;
 import org.springframework.web.bind.annotation.*;
-import java.util.*;
+import java.util.Optional;
 @RestController
-    public class HelloWorldController {
+public class HelloWorldController {
 
     @GetMapping("/HelloWorld")
     public String saluda(@RequestParam(name = "nom", defaultValue = "UNKNOWN") String nom) {
-        return "Hola, " + nom + ". Estàs executant un projecte Maven";
+        return "Hola, " + nom + ". Estàs executant un projecte Gradle";
     }
     /*
     @GetMapping( {"/HelloWorld2", "/HelloWorld2/{nom}"})
     public String saluda2(@PathVariable(name = "nom", required = false) Optional<String> nom) {
-        return "Hola, " + nom.orElse("UNKNOWN") + ". Estàs executant un projecte Maven";
+        return "Hola, " + nom.orElse("UNKNOWN") + ". Estàs executant un projecte Gradle";
     }*/
 
     @GetMapping( {"/HelloWorld2", "/HelloWorld2/{nom}"})
@@ -19,6 +19,6 @@ import java.util.*;
         if (nom == null) {
             nom = "UNKNOWN";
         }
-        return "Hola, " + nom + ". Estàs executant un projecte Maven";
+        return "Hola, " + nom + ". Estàs executant un projecte Gradle";
     }
 }
